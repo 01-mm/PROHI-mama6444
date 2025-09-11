@@ -55,4 +55,6 @@ Tested on Python 3.12.7 with the following packages:
 
 ## Contributors
 
-_Add the project's authors, contact information, and links to websites or portfolios._
+Author: Matija Matic
+contact information:
+matija.matic@stud.ki.se
