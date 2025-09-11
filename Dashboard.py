@@ -47,13 +47,75 @@ enhance the problem domain related to the selected dataset.
 ### UNCOMMENT THE CODE BELOW TO SEE EXAMPLE OF INPUT WIDGETS
 
 # # DATAFRAME MANAGEMENT
-# import numpy as np
+st.write("Note: the data below is synthetic.")
+import numpy as np
 
-# dataframe = np.random.randn(10, 20)
-# st.dataframe(dataframe)
+dataframe = np.random.randn(10, 20)
+st.dataframe(dataframe)
 
 # # Add a slider to the sidebar:
-# add_slider = st.slider(
-#     'Select a range of values',
-#     0.0, 100.0, (25.0, 75.0)
-# )
+st.write("Try using the slider.")
+add_slider = st.slider(
+    'Select a range of values',
+     0.0, 100.0, (25.0, 75.0)
+ )
+
+## Input today's date (INPUT 1)
+st.write("Please enter today's date")
+import datetime
+
+d = st.date_input("What is today's date", datetime.date(2025, 9, 11))
+st.write("The date is:", d)
+
+## Select your alarm (Input 2)
+st.write("When would you like to wake up tomorrow?")
+t = st.time_input("Set an alarm for", value=None)
+st.write("Alarm is set for", t)
+
+## (DATA 1)
+st.write("Random Sales Data")
+from datetime import datetime, date
+import pandas as pd
+
+@st.cache_data
+def load_data():
+    year = datetime.now().year
+    df = pd.DataFrame(
+        {
+            "Date": [date(year, month, 1) for month in range(1, 4)],
+            "Total": np.random.randint(1000, 5000, size=3),
+        }
+    )
+    df.set_index("Date", inplace=True)
+    return df
+
+df = load_data()
+config = {
+    "_index": st.column_config.DateColumn("Month", format="MMM YYYY"),
+    "Total": st.column_config.NumberColumn("Total ($)"),
+}
+
+st.dataframe(df, column_config=config)
+
+
+## Scatterplot with Map (CHART 1)
+st.write("Data from San Francisco")
+from numpy.random import default_rng as rng
+
+df = pd.DataFrame(
+    {
+        "col1": rng(0).standard_normal(1000) / 50 + 37.76,
+        "col2": rng(1).standard_normal(1000) / 50 + -122.4,
+        "col3": rng(2).standard_normal(1000) * 100,
+        "col4": rng(3).standard_normal((1000, 4)).tolist(),
+    }
+)
+
+st.map(df, latitude="col1", longitude="col2", size="col3", color="col4")
+
+## Was this dashboard easy to use? (INPUT 3)
+st.write("Was this Dashboard easy to use?")
+sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
+selected = st.feedback("thumbs")
+if selected is not None:
+    st.markdown(f"You selected: {sentiment_mapping[selected]}")
