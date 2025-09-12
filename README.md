@@ -56,5 +56,4 @@ Tested on Python 3.12.7 with the following packages:
 ## Contributors
 
 Author: Matija Matic
-contact information:
-matija.matic@stud.ki.se
+Contact Information: matija.matic@stud.ki.se
