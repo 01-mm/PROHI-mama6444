@@ -54,26 +54,26 @@ dataframe = np.random.randn(10, 20)
 st.dataframe(dataframe)
 
 # # Add a slider to the sidebar:
-st.markdown("## Try using the slider.")
+st.markdown("## Try using the slider")
 add_slider = st.slider(
     'Select a range of values',
      0.0, 100.0, (25.0, 75.0)
  )
 
 ## Input today's date (INPUT 1)
-st.markdown("##Please enter today's date")
+st.markdown("## Please enter today's date")
 import datetime
 
 d = st.date_input("What is today's date", datetime.date(2025, 9, 11))
 st.write("The date is:", d)
 
 ## Select your alarm (Input 2)
-st.markdown("##When would you like to wake up tomorrow?")
+st.markdown("## When would you like to wake up tomorrow?")
 t = st.time_input("Set an alarm for", value=None)
 st.write("Alarm is set for", t)
 
 ## (DATA 1)
-st.markdown("##Random Sales Data")
+st.markdown("## Random Sales Data")
 from datetime import datetime, date
 import pandas as pd
 
@@ -99,7 +99,7 @@ st.dataframe(df, column_config=config)
 
 
 ## Scatterplot with Map (CHART 1)
-st.write("Data from San Francisco")
+st.markdown("## Data from San Francisco")
 from numpy.random import default_rng as rng
 
 df = pd.DataFrame(
@@ -114,7 +114,7 @@ df = pd.DataFrame(
 st.map(df, latitude="col1", longitude="col2", size="col3", color="col4")
 
 ## Was this dashboard easy to use? (INPUT 3)
-st.write("Was this Dashboard easy to use?")
+st.markdown("## Was this Dashboard easy to use?")
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
 if selected is not None:
