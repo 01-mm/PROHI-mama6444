@@ -54,26 +54,26 @@ dataframe = np.random.randn(10, 20)
 st.dataframe(dataframe)
 
 # # Add a slider to the sidebar:
-st.write("Try using the slider.")
+st.markdown("## Try using the slider.")
 add_slider = st.slider(
     'Select a range of values',
      0.0, 100.0, (25.0, 75.0)
  )
 
 ## Input today's date (INPUT 1)
-st.write("Please enter today's date")
+st.markdown("##Please enter today's date")
 import datetime
 
 d = st.date_input("What is today's date", datetime.date(2025, 9, 11))
 st.write("The date is:", d)
 
 ## Select your alarm (Input 2)
-st.write("When would you like to wake up tomorrow?")
+st.markdown("##When would you like to wake up tomorrow?")
 t = st.time_input("Set an alarm for", value=None)
 st.write("Alarm is set for", t)
 
 ## (DATA 1)
-st.write("Random Sales Data")
+st.markdown("##Random Sales Data")
 from datetime import datetime, date
 import pandas as pd
 
