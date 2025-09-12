@@ -16,7 +16,7 @@ _Here you can include images, like the logo from SU_
 _This template project will contain a simple interactive web dashboard with Streamlit. Feel free to edit this document as desired_
 
 ## System description
-
+A Streamlit dashboard containing 2 pages was created that included three input widgets, one data widget and one chart widget on the page named Dashboard. The second page named About included the author's name as well as information about the data set used and the data science pipeline completed during the spring semester of 2025. Synthetic data was used for the dashboard. 
 ### Installation of libraries
 
 Run the commands below in a terminal to configure the project and install the package dependencies for the first time.
