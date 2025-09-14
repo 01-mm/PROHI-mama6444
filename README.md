@@ -11,14 +11,20 @@ _Here you can include images, like the logo from SU_
 
 ![Your dashboard](./assets/project-logo.jpg)
 
+These are screenshots of some of my Dashboard components/widgets:
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+
 ## Introduction
 
-_This template project will contain a simple interactive web dashboard with Streamlit. Feel free to edit this document as desired_
+For Individual Assignment II in the project management class at Stockholm University, I was tasked with creating a custom Streamlit Dashboard. The purpose of this task was to familiarize me with Streamlit. This will enable me to provide valuable contributions to the major Streamlit Dashboard group project that will be completed as part of this course. In the system description below you will find what the components of this dashboard are. 
 
 ## System description
 A Streamlit dashboard containing 2 pages was created that included three input widgets, one data widget and one chart widget on the page named Dashboard. The second page named About included the author's name as well as information about the data set used and the data science pipeline completed during the spring semester of 2025. Synthetic data was used for the dashboard. 
 ### Installation of libraries
-
+In order to create the Streamlit dashboard, I had to follow the following steps which had already been provided to me:
 Run the commands below in a terminal to configure the project and install the package dependencies for the first time.
 
 If you are using Mac, you may need to install Xcode. Check the official Streamlit documentation [here](https://docs.streamlit.io/get-started/installation/command-line#prerequisites).
@@ -42,6 +48,7 @@ First, make sure that you are running Python from the environment. Check the ste
 # If the command above fails, use:
 > python -m streamlit run Dashboard.py
 ```
+After making changes and adding different elements to the dashboard I followed the steps listed above to execute the dashboard and see what it looked like in a web browser.
 
 ### Dependencies
 
