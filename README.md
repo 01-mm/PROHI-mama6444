@@ -10,10 +10,10 @@ _Here you can include images, like the logo from SU_
 
 ![Your dashboard](./assets/project-logo.jpg)
 
-These are screenshots of some of my Dashboard components/widgets:
+These are screenshots from my laptop of some Dashboard components/widgets:
 ![alt text](image.png)  (Dashboard page)
 ![alt text](image-1.png)  (Dashboard page)
-![alt text](image-3.png)  (Dahboard page)
+![alt text](image-3.png)  (Dashboard page)
 ![alt text](image-4.png)  (About page)
 
 ## Introduction
